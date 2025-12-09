@@ -1,39 +1,41 @@
-# OCR Text Extraction – Shipping Label _1_ Line
+OCR Text Extraction – Shipping Label _1_ Line
+Overview
 
-## Project Overview
+This tool extracts the exact text line containing the pattern _1_ from shipping label images using an OCR pipeline built with Tesseract (pytesseract) and OpenCV.
+It is designed for high accuracy and fast processing, with a lightweight Streamlit interface for easy testing.
 
-This project implements an OCR-based text extraction pipeline for shipping label images.  
-The goal is to extract the complete text line that contains the pattern `_1_` from each image with high accuracy.
+👉 Live App: https://ocrproject-gokul.streamlit.app/
 
-The solution uses an open-source OCR engine (Tesseract via `pytesseract`) and a modular Python codebase with a simple Streamlit frontend.
+Key Features
 
-## Features
+Preprocessing of images using OpenCV
 
-- Image preprocessing using OpenCV
-- Line-level OCR using Tesseract
-- Robust text-line selection for the pattern `_1_`
-- JSON output per image
-- Simple Streamlit demo to upload an image and see results
-- Basic tests to validate the pipeline
+Line-level OCR with Tesseract
 
-## Directory Structure
+Accurate detection of the line containing _1_
 
-project-root/  
-├── README.md  
-├── requirements.txt  
-├── src/  
-│   ├── ocr_engine.py  
-│   ├── preprocessing.py  
-│   ├── text_extraction.py  
-│   └── utils.py  
-├── app.py  
+JSON output for each processed image
 
-## Installation
+Simple Streamlit UI for uploading and testing
 
-```bash
+Basic test cases included for validation
+
+Project Structure
+project-root/
+├── README.md
+├── requirements.txt
+├── src/
+│   ├── ocr_engine.py
+│   ├── preprocessing.py
+│   ├── text_extraction.py
+│   └── utils.py
+├── app.py
+
+How to Install & Run
 python -m venv venv
 venv\Scripts\activate        # Windows
 # or
-source venv/bin/activate     # Linux / macOS
+source venv/bin/activate     # Linux/macOS
 
 pip install -r requirements.txt
+streamlit run app.py
